@@ -32,15 +32,13 @@ Documents/KiCad/10.0/scripting/plugins/
 
 then in KiCad run *Tools → External Plugins → Refresh Plugins*.
 
-## Usage
+## Arrange In Circle
 
 Select the footprints in the PCB editor, then run
 *Tools → External Plugins → Arrange Footprints in Circle*.
 The dialog shows a live preview; each footprint is drawn as its pad
 bounding box so you can see the ring, the start part and the rotation
 effects before applying. Placement order is ascending by reference.
-
-## Screenshots
 
 Six RGB LEDs before arranging (picked from the schematic in a row):
 
@@ -59,6 +57,27 @@ Same, plus *Keep silkscreen text upright* — labels stay readable:
 
 ![Ring with rotated parts, silkscreen upright](screenshots/04-ring-rotated-silk-upright.png)
 
+## Arrange Mounting Holes
+
+Select 4, 6 or more mounting holes in the PCB editor, then run
+*Tools → External Plugins → Arrange Mounting Holes*.
+The dialog shows a live preview: grey dots are the holes' current
+positions, coloured boxes are the target grid points, each labelled with
+the reference that will land there. Each hole moves to its nearest free
+grid point; columns/rows and the X/Y spacing are adjustable.
+
+Four mounting holes before arranging (picked from the schematic, stacked
+on the left):
+
+![Mounting holes before](screenshots/05-mounting-holes-before.png)
+
+The dialog with the live preview (45 x 45 mm spacing, grouping enabled):
+
+![Mounting holes dialog](screenshots/06-mounting-holes-dialog.png)
+
+After — cleanly placed in the board corners, grouped:
+
+![Mounting holes finished](screenshots/07-mounting-holes-finished.png)
 
 ## Repository layout
 
