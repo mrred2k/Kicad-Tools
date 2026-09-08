@@ -15,9 +15,9 @@
         "url": "https://raw.githubusercontent.com/mrred2k/Kicad-Tools/main/packages.json"
     },
     "resources": {
-        "sha256": "a87ccea1e766c31933e1004009bf6e3dc81715cb49ddeee28756abfb9e48803f",
-        "update_time_utc": "2026-09-08 17:37:48",
-        "update_timestamp": 1788889068,
-        "url": "https://raw.githubusercontent.com/mrred2k/Kicad-Tools/main/README.md"
+        "sha256": "f8ee20492468c3143e80a82ab85207e3c05670157380d90c0a5a59bfc1fdbdfc",
+        "update_time_utc": "2026-09-08 17:54:31",
+        "update_timestamp": 1788890071,
+        "url": "https://github.com/mrred2k/Kicad-Tools/releases/download/v0.1.0/resources.zip"
     }
 }

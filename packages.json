@@ -63,10 +63,10 @@
           "version": "0.1.0",
           "status": "development",
           "kicad_version": "10.0",
-          "download_sha256": "50311f166b0a3a1c51f920de51608f6017fe76269aa8431e7e34e26d35f8d91e",
-          "download_size": 5862,
+          "download_sha256": "dabbf8fe7e92f4608fc7a7c3e197bfce68df100fb0d286d3395d6af54bb7df19",
+          "download_size": 10927,
           "download_url": "https://github.com/mrred2k/Kicad-Tools/releases/download/v0.1.0/ArrangeMountingHoles-0.1.0.zip",
-          "install_size": 15687
+          "install_size": 20635
         }
       ]
     }

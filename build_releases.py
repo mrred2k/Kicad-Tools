@@ -106,6 +106,40 @@ def main():
         fh.write("\n")
     print(f"Wrote {packages_path} with {len(packages)} package(s).")
 
+    # resources.zip: <identifier>/icon.png per package (icons for the PCM
+    # repository view), plus repository.json sha256 update.
+    res_zip = os.path.join(dist, "resources.zip")
+    with zipfile.ZipFile(res_zip, "w", zipfile.ZIP_DEFLATED) as zf:
+        for folder, d in find_package_dirs():
+            meta_path = os.path.join(d, "metadata.json")
+            with open(meta_path, encoding="utf-8") as fh:
+                meta = json.load(fh)
+            ident = meta["identifier"]
+            icon = os.path.join(d, "resources", "icon.png")
+            if os.path.isfile(icon):
+                zf.write(icon, f"{ident}/icon.png")
+                print(f"  resources: {ident}/icon.png")
+    res_sha = hashlib.sha256(open(res_zip, "rb").read()).hexdigest()
+    print(f"Wrote {res_zip} ({os.path.getsize(res_zip)} bytes, "
+          f"sha256 {res_sha[:16]}...)")
+
+    # Patch repository.json: resource url + sha256 + timestamps
+    repo_path = os.path.join(HERE, "repository.json")
+    with open(repo_path, encoding="utf-8") as fh:
+        repo = json.load(fh)
+    now = datetime.now(timezone.utc)
+    repo["resources"] = {
+        "sha256": res_sha,
+        "update_time_utc": now.strftime("%Y-%m-%d %H:%M:%S"),
+        "update_timestamp": int(now.timestamp()),
+        "url": (f"https://github.com/{args.owner}/{args.repo}/releases/"
+                f"download/{args.tag_prefix}{version}/resources.zip"),
+    }
+    with open(repo_path, "w", encoding="utf-8") as fh:
+        json.dump(repo, fh, indent=4)
+        fh.write("\n")
+    print(f"Updated {repo_path} resources -> {res_zip}")
+
 
 if __name__ == "__main__":
     main()
