@@ -34,6 +34,41 @@
           "install_size": 21462
         }
       ]
+    },
+    {
+      "$schema": "https://go.kicad.org/pcm/schemas/v2",
+      "name": "Arrange Mounting Holes",
+      "description": "Arrange selected mounting holes on a grid (columns x rows) with exact X/Y spacing. Live preview included.",
+      "description_full": "Moves the SELECTED mounting-hole footprints onto a clean grid (columns x rows) with exact X/Y spacing, e.g. 4 holes on a 40 x 40 mm rectangle or 6 holes on a 2 x 3 grid. Nothing is duplicated and nothing is aligned to edge cuts \u2014 the holes are simply snapped to the grid positions of a centered rectangle.\n\nFeatures:\n- Live preview: grey dots are the holes' current positions, coloured boxes are the target grid points, each labelled with the reference that will land there\n- Columns/Rows freely adjustable (defaults: factors closest to a square, oriented to the selection's bounding box)\n- X/Y spacing in mm (defaults measured from the selection)\n- Each hole moves to its nearest free grid point\n- Optional: group the footprints after placing so they stay together as one movable unit (skipped automatically if they are already grouped)\n- Normal edit operation, undoable with Ctrl+Z\n\nUsage: select the mounting holes in the PCB editor, then run Tools -> External Plugins -> Arrange Mounting Holes.",
+      "identifier": "com.github.mrred2k.arrange-mounting-holes",
+      "type": "plugin",
+      "author": {
+        "name": "Lucas Pfennig",
+        "contact": {
+          "github": "https://github.com/mrred2k"
+        }
+      },
+      "maintainer": {
+        "name": "Lucas Pfennig",
+        "contact": {
+          "github": "https://github.com/mrred2k"
+        }
+      },
+      "license": "GPL-3.0",
+      "resources": {
+        "homepage": "https://github.com/mrred2k/Kicad-Tools"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "status": "development",
+          "kicad_version": "10.0",
+          "download_sha256": "50311f166b0a3a1c51f920de51608f6017fe76269aa8431e7e34e26d35f8d91e",
+          "download_size": 5862,
+          "download_url": "https://github.com/mrred2k/Kicad-Tools/releases/download/v0.1.0/ArrangeMountingHoles-0.1.0.zip",
+          "install_size": 15687
+        }
+      ]
     }
   ]
 }

@@ -8,6 +8,7 @@ KiCad Plugin and Content Manager (PCM).
 | Plugin | KiCad | Description |
 |--------|-------|-------------|
 | [Arrange In Circle](ArrangeInCircle/) | 10.0 | Place selected footprints evenly on a circle with a live preview. No duplication — schematic links stay intact. |
+| [Arrange Mounting Holes](ArrangeMountingHoles/) | 10.0 | Arrange selected mounting holes on a grid (columns x rows) with exact X/Y spacing. Live preview included. |
 
 ## Install from the PCM repository
 
