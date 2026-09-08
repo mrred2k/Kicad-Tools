@@ -1,0 +1,31 @@
+{
+  "$schema": "https://go.kicad.org/pcm/schemas/v2",
+  "name": "Arrange Footprints in Circle",
+  "description": "Place selected footprints evenly on a circle with live preview. No duplication, schematic links stay intact.",
+  "description_full": "Moves the SELECTED footprints onto a circle (center = centroid of the selection). Nothing is duplicated, so every footprint keeps its schematic link (no \"Update PCB from Schematic\" conflicts).\n\nIdeal for rings of serially-chained RGB LEDs or other circular part layouts.\n\nFeatures:\n- Live preview: each footprint is drawn as its pad bounding box, rotated according to the current settings\n- Radius and start angle (0 deg = east, -90 deg = north/12 o'clock)\n- Clockwise or counter-clockwise order (placement order = ascending reference)\n- \"Rotate parts\": point each part's 0 deg direction radially outward\n- \"Keep silkscreen text upright\": rotate parts but counter-rotate text on silkscreen layers so it stays readable (0/180 deg rule)\n- Normal edit operation, undoable with Ctrl+Z\n\nUsage: select the footprints in the PCB editor, then run Tools -> External Plugins -> Arrange Footprints in Circle.",
+  "identifier": "com.github.mrred2k.arrange-in-circle",
+  "type": "plugin",
+  "author": {
+    "name": "Lucas Pfennig",
+    "contact": {
+      "github": "https://github.com/mrred2k"
+    }
+  },
+  "maintainer": {
+    "name": "Lucas Pfennig",
+    "contact": {
+      "github": "https://github.com/mrred2k"
+    }
+  },
+  "license": "GPL-3.0",
+  "resources": {
+    "homepage": "https://github.com/mrred2k/Kicad-Tools"
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "status": "development",
+      "kicad_version": "10.0"
+    }
+  ]
+}

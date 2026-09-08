@@ -1,0 +1,22 @@
+{
+    "$schema": "https://go.kicad.org/pcm/schemas/v2#/definitions/Repository",
+    "maintainer": {
+        "contact": {
+            "web": "https://github.com/mrred2k"
+        },
+        "name": "Lucas Pfennig"
+    },
+    "name": "Kicad-Tools",
+    "packages": {
+        "sha256": "",
+        "update_time_utc": "2026-09-08 00:00:00",
+        "update_timestamp": 1788739200,
+        "url": "https://raw.githubusercontent.com/mrred2k/Kicad-Tools/main/packages.json"
+    },
+    "resources": {
+        "sha256": "",
+        "update_time_utc": "2026-09-08 00:00:00",
+        "update_timestamp": 1788739200,
+        "url": "https://raw.githubusercontent.com/mrred2k/Kicad-Tools/main/README.md"
+    }
+}
