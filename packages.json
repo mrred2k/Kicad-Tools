@@ -28,10 +28,10 @@
           "version": "0.1.0",
           "status": "development",
           "kicad_version": "10.0",
-          "download_sha256": "d04140403e70d816c14d30c4f422b57575a05f8685eb2c3ff326ac62f1c35e49",
-          "download_size": 6094,
+          "download_sha256": "82ed40e38da0498811db8f40fc1800033071fdbec614e3b56d57aca334937076",
+          "download_size": 11486,
           "download_url": "https://github.com/mrred2k/Kicad-Tools/releases/download/v0.1.0/ArrangeInCircle-0.1.0.zip",
-          "install_size": 16251
+          "install_size": 21462
         }
       ]
     }
