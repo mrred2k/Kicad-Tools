@@ -8,15 +8,15 @@
     },
     "name": "Kicad-Tools",
     "packages": {
-        "sha256": "",
-        "update_time_utc": "2026-09-08 00:00:00",
-        "update_timestamp": 1788739200,
+        "sha256": "fb6412175f1947ad6b3ad971e9fddb97c5db3106b3983eaa6ed3a78347110d37",
+        "update_time_utc": "2026-09-08 17:37:48",
+        "update_timestamp": 1788889068,
         "url": "https://raw.githubusercontent.com/mrred2k/Kicad-Tools/main/packages.json"
     },
     "resources": {
-        "sha256": "",
-        "update_time_utc": "2026-09-08 00:00:00",
-        "update_timestamp": 1788739200,
+        "sha256": "a87ccea1e766c31933e1004009bf6e3dc81715cb49ddeee28756abfb9e48803f",
+        "update_time_utc": "2026-09-08 17:37:48",
+        "update_timestamp": 1788889068,
         "url": "https://raw.githubusercontent.com/mrred2k/Kicad-Tools/main/README.md"
     }
 }
