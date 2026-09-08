@@ -181,17 +181,14 @@ def _render_ring(parts, radius_mm, start_deg, clockwise, rotate_parts,
             tx = int(lx) + int(w_mm * scale) + 6
         else:
             tx = int(lx) - int(w_mm * scale) - 6
-        # Label — rotates like real silk text: with the part unless
-        # "keep silkscreen upright" holds it at 0/180 deg.
+        # Label — mirrors the real silk text behavior: rotates with the
+        # part unless "keep silkscreen upright" keeps it horizontal.
+        # (Real KiCad may store 180 deg for parts on the lower half, but
+        # in the preview we always draw upright labels at 0 deg so they
+        # read normally.)
         label_rot = 0.0
-        if rotate_parts:
-            if keep_silk_upright:
-                a = deg % 360.0
-                if a > 180.0:
-                    a -= 360.0
-                label_rot = 0.0 if -90.0 <= a <= 90.0 else 180.0
-            else:
-                label_rot = deg
+        if rotate_parts and not keep_silk_upright:
+            label_rot = deg
         mdc.SetTextForeground(wx.Colour(20, 20, 20))
         if label_rot == 0.0:
             if tx < 2:

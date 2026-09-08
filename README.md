@@ -39,6 +39,26 @@ The dialog shows a live preview; each footprint is drawn as its pad
 bounding box so you can see the ring, the start part and the rotation
 effects before applying. Placement order is ascending by reference.
 
+## Screenshots
+
+Six RGB LEDs before arranging (picked from the schematic in a row):
+
+![LED string](screenshots/01-led-string.png)
+
+Arranged in a circle — parts keep their original rotation:
+
+![Ring without part rotation](screenshots/02-ring-no-rotate.png)
+
+Arranged in a circle with *Rotate parts* enabled (silkscreen rotates with
+the part):
+
+![Ring with rotated parts](screenshots/03-ring-rotated.png)
+
+Same, plus *Keep silkscreen text upright* — labels stay readable:
+
+![Ring with rotated parts, silkscreen upright](screenshots/04-ring-rotated-silk-upright.png)
+
+
 ## Repository layout
 
 ```
